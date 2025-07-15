@@ -75,4 +75,25 @@ Nothing extra to do here ✅
 ## ✅ 7. Replace `main.c` Logic
 
 - Open `main.c`
-- Keep the
+- Keep the `HAL_Init()`, `SystemClock_Config()`, `MX_TIM1_Init()`, `MX_GPIO_Init()`
+- Write your **own `while(1)` logic** to:
+  - Fade LED
+  - Adjust duty cycle
+  - Start/stop PWM
+
+---
+
+## 📈 8. Verify PWM Output
+
+- Build and flash the code
+- Use:
+  - **Oscilloscope** to view signal
+  - **LED** to see brightness control
+  - **Motor driver** to control speed
+
+---
+
+# ✅ Done!
+
+You’ve set up PWM output on PA8 using TIM1, ready for HAL application logic.
+
