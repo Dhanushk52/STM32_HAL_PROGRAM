@@ -1,6 +1,3 @@
-## 📘 `STM32CubeIDE_Pin_Setup.md`
-
-````md
 # 🧩 STM32CubeIDE Setup Guide: I2C LCD + Button Interrupt with Flag
 
 This guide walks you through STM32CubeIDE configuration to:
@@ -103,7 +100,7 @@ Paste this at the top of `main.c`:
 
 ```c
 volatile uint8_t btn_pressed_flag = 0;
-````
+
 
 Then inside `main()` loop:
 
