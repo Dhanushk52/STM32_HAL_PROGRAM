@@ -75,11 +75,12 @@ This guide helps configure UART communication on STM32F103C8T6 (Blue Pill) using
 
 Inside `main()`:
 
-```c
+
 char msg[] = "UART Polling Hello\r\n";
 HAL_UART_Transmit(&huart1, (uint8_t*)msg, strlen(msg), HAL_MAX_DELAY);
 
-⚡ 8. UART Output via USB-to-Serial
+## ⚡ 8. UART Output via USB-to-Serial
+
 Connect USB-to-Serial adapter:
 
 Adapter TX → STM32 PA10 (RX)
@@ -105,4 +106,4 @@ Output visible in PuTTY	✅
 
 🎯 Outcome
 You will see UART Polling Hello printed repeatedly in the serial terminal every second — fully using STM32 HAL polling method 💬
-
+```c
