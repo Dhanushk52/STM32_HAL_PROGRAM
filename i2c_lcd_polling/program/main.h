@@ -1,23 +1,19 @@
-#include "main.h"
-#include "lcd_i2c.h"
+#ifndef __LCD_I2C_H
+#define __LCD_I2C_H
 
+#include "stm32f1xx_hal.h"
+#include "string.h"
+
+// Update this if using a different I2C port or address
+#define LCD_ADDR       (0x27 << 1)  // Shifted for HAL
 extern I2C_HandleTypeDef hi2c1;
 
-int main(void)
-{
-  HAL_Init();
-  SystemClock_Config();
-  MX_GPIO_Init();
-  MX_I2C1_Init();
+#define LCD_BACKLIGHT  0x08
+#define ENABLE         0x04
 
-  lcd_init();                     // Initialize LCD
-  lcd_send_string("Hello Boss!"); // Line 1
+void lcd_send_cmd(uint8_t cmd);
+void lcd_send_data(uint8_t data);
+void lcd_send_string(char *str);
+void lcd_init(void);
 
-  lcd_send_cmd(0xC0);             // Move to second line
-  lcd_send_string("STM32 + I2C"); // Line 2
-
-  while (1)
-  {
-    // Loop here; LCD content static
-  }
-}
+#endif
