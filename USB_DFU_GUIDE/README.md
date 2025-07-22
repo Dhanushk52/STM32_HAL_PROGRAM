@@ -1,13 +1,13 @@
 ---
 
-## 📝 Guide: Program STM32F103C8 (Blue Pill) via USB DFU using CubeProgrammer
+#### 📝 Guide: Program STM32F103C8 (Blue Pill) via USB DFU using CubeProgrammer
 
 ### 🔧 Prerequisites:
 
 * STM32F103C8T6 Blue Pill
 * USB cable
 * STM32CubeProgrammer installed
-* `generic_boot20_pc13.bin` DFU bootloader (Maple DFU)
+* generic_boot20_pc13.bin DFU bootloader (Maple DFU) is in this path (USB_DFU_GUIDE/Bootloader_file/generic_boot20_pc13.bin)
 * (Optional) Zadig for Windows DFU driver
 
 ---
