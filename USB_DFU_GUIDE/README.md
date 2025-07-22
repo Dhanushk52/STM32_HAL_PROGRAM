@@ -31,7 +31,7 @@ This guide explains how to flash a USB DFU bootloader (like **Maple DFU**) to yo
 4. Connect to the board (`ST-Link` or `UART`)
 
 5. Flash the bootloader:
-   - File: `generic_boot20_pc13.bin`
+   - File: stm32f1_dfu.bin
    - Start address: `0x08000000`
    - Click **Download**
 
@@ -72,7 +72,7 @@ This guide explains how to flash a USB DFU bootloader (like **Maple DFU**) to yo
 
 | Scenario                  | Connection Type | Bootloader        | How to Upload        |
 |---------------------------|------------------|--------------------|-----------------------|
-| First Bootloader Flash    | ST-Link / UART   | `generic_boot20...`| STM32CubeProgrammer   |
+| First Bootloader Flash    | ST-Link / UART   | stm32f1_dfu.bin    | STM32CubeProgrammer   |
 | Firmware Update Later     | USB (DFU mode)   | Already installed  | STM32CubeProgrammer   |
 
 ---
