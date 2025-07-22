@@ -9,7 +9,7 @@ This guide explains how to flash a USB DFU bootloader (like **Maple DFU**) to yo
 - ✅ STM32F103C8T6 Blue Pill board  
 - ✅ USB Mini-B cable  
 - ✅ STM32CubeProgrammer (installed)  
-- ✅ `generic_boot20_pc13.bin` (Maple DFU bootloader)  
+- ✅ `generic_boot20_pc13.bin` (Maple DFU bootloader) file path (USB_DFU_GUIDE/BOOTLOADER_FILE/generic_boot20_pc13.bin)
 - ✅ (Optional) Zadig USB driver tool for Windows  
 
 ---
