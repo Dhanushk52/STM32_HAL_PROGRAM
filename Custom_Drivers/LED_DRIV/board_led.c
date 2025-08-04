@@ -1,7 +1,6 @@
 #include "board_led.h"
 #include "stm32f1xx_hal.h"
 
-
 void board_led_init(void)
 {
 	GPIO_InitTypeDef GPIO_InitStruct = {0};
@@ -18,16 +17,15 @@ void board_led_init(void)
 
 void board_led_On(void)
 {
-    HAL_GPIO_WritePin(GPIOC, GPIO_PIN_13, GPIO_PIN_RESET); // RESET IN ON FNC BECAUSE IT IS INVERSE
+    HAL_GPIO_WritePin(BOARD_LED_PORT, BOARD_LED_PIN, GPIO_PIN_RESET); // RESET IN ON FNC BECAUSE IT IS INVERSE
 }
 
 void board_led_Off(void)
 {
-    HAL_GPIO_WritePin(GPIOC, GPIO_PIN_13, GPIO_PIN_SET);// ALSO AS OPPOSITE TO ON LED
+    HAL_GPIO_WritePin(BOARD_LED_PORT, BOARD_LED_PIN, GPIO_PIN_SET);// ALSO AS OPPOSITE TO ON LED
 }
 
 void board_led_Toggle(void)
 {
-    HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_13);
+    HAL_GPIO_TogglePin(BOARD_LED_PORT, BOARD_LED_PIN);
 }
-
