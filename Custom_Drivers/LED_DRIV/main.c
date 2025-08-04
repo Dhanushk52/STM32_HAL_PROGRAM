@@ -4,13 +4,11 @@ int main(void)
 {
     HAL_Init();
     SystemClock_Config();
-
-    // Initialize the LED
-    GPIO_InitPin(RedledsPort, RedLedsPin, GPIO_MODE_OUTPUT);
-
+    board_led_init();  // Initialize the Onboard LED
+    
     while (1)
     {
-        LED_RED_Toggle();
-        HAL_Delay(500);
+      board_led_Toggle();
+      HAL_Delay(500);  
     }
 }
